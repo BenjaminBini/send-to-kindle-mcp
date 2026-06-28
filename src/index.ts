@@ -50,8 +50,6 @@ function requireEnv(name: string, value: string | undefined): string {
 const SUPPORTED_EXTENSIONS = new Set([
   ".epub",
   ".pdf",
-  ".doc",
-  ".docx",
   ".txt",
   ".rtf",
   ".htm",
@@ -72,9 +70,6 @@ const MAX_TOTAL_BYTES = 50 * 1024 * 1024;
 const MIME_TYPES: Record<string, string> = {
   ".epub": "application/epub+zip",
   ".pdf": "application/pdf",
-  ".doc": "application/msword",
-  ".docx":
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
   ".txt": "text/plain",
   ".rtf": "application/rtf",
   ".htm": "text/html",
@@ -125,7 +120,7 @@ const server = new McpServer({
 
 server.tool(
   "send_to_kindle",
-  "Send one or more local document files (EPUB, PDF, DOCX, etc.) to a Kindle " +
+  "Send one or more local document files (EPUB, PDF, TXT, etc.) to a Kindle " +
     "device via Amazon's Send-to-Kindle email feature. The files are emailed as " +
     "attachments to the Kindle address (up to 25 files, 50 MB total). NOTE: the " +
     "sending email address must be on your Amazon 'Approved Personal Document " +

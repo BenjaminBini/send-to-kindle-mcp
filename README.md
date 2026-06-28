@@ -1,7 +1,7 @@
 # send-to-kindle-mcp
 
 An [MCP](https://modelcontextprotocol.io) server that sends document files
-(EPUB, PDF, DOCX, …) to your Kindle using Amazon's **Send to Kindle** email
+(EPUB, PDF, TXT, …) to your Kindle using Amazon's **Send to Kindle** email
 feature. The file is emailed as an attachment to your device's `@kindle.com`
 address.
 
@@ -17,8 +17,8 @@ address.
 All files are sent as attachments in a single email. Amazon's limits: up to
 **25 attachments** and **50 MB combined** per email.
 
-Supported formats: `.epub`, `.pdf`, `.doc`, `.docx`, `.txt`, `.rtf`, `.htm`,
-`.html`, `.png`, `.gif`, `.jpg`, `.jpeg`, `.bmp`.
+Supported formats: `.epub`, `.pdf`, `.txt`, `.rtf`, `.htm`, `.html`, `.png`,
+`.gif`, `.jpg`, `.jpeg`, `.bmp`.
 
 ## Prerequisites (do this once on Amazon's side)
 
