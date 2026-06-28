@@ -1,6 +1,9 @@
 {
-  "name": "send-to-kindle-mcp",
+  "name": "@benbini/send-to-kindle-mcp",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "MCP server that sends EPUB (and other supported document) files to a Kindle device via Amazon's Send-to-Kindle email feature.",
   "type": "module",
   "license": "MIT",

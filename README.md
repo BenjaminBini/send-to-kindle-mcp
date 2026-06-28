@@ -39,7 +39,7 @@ EPUB is supported natively (Amazon converts it to a Kindle format on receipt).
 No clone or build needed — the server runs via `npx` straight from npm:
 
 ```bash
-npx send-to-kindle-mcp
+npx @benbini/send-to-kindle-mcp
 ```
 
 (Your MCP client launches it for you using the config below; you don't normally
@@ -62,7 +62,7 @@ claude mcp add send-to-kindle \
   --env SMTP_PASS=your-app-password \
   --env SMTP_FROM=you@gmail.com \
   --env KINDLE_EMAIL=you_abc123@kindle.com \
-  -- npx -y send-to-kindle-mcp
+  -- npx -y @benbini/send-to-kindle-mcp
 ```
 
 ### Generic `mcpServers` JSON (Claude Desktop, Cursor, etc.)
@@ -72,7 +72,7 @@ claude mcp add send-to-kindle \
   "mcpServers": {
     "send-to-kindle": {
       "command": "npx",
-      "args": ["-y", "send-to-kindle-mcp"],
+      "args": ["-y", "@benbini/send-to-kindle-mcp"],
       "env": {
         "SMTP_HOST": "smtp.gmail.com",
         "SMTP_PORT": "587",
